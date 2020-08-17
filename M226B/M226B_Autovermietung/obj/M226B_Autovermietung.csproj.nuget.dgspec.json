@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung\\M226B_Autovermietung.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung\\M226B_Autovermietung.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung\\M226B_Autovermietung.csproj",
+        "projectName": "M226B_Autovermietung",
+        "projectPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung\\M226B_Autovermietung.csproj",
+        "packagesPath": "C:\\Users\\maxbr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maxbr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
