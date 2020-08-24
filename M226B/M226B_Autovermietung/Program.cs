@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace M226B_Autovermietung
+namespace ch.gibz.m226b.autovermietung
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!2");
+            Console.WriteLine("Hello World!");
         }
     }
 }
