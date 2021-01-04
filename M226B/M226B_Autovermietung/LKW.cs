@@ -9,12 +9,11 @@ namespace ch.gibz.m226b.autovermietung
         public string Weight { get; set; }
         public string Height { set; get; }
 
-        public LKW(string Serialnumber, string Name, string Brand, string Model, DateTime ManufactureDate, string Price, string KmAmount, string Weight, string Height)
-           : base(Serialnumber, Name, Brand, Model, ManufactureDate, Price, KmAmount)
+        public LKW(string Serialnumber, string Brand, string Model, string Price,  string Weight, string Height)
+           : base(Serialnumber, Brand, Model, Price)
         {
             this.Weight = Weight;
             this.Height = Height;
-
         }
     }
 }

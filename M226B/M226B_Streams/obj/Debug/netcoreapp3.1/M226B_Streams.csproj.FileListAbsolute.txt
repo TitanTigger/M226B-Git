@@ -1,0 +1,13 @@
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.csprojAssemblyReference.cache
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.AssemblyInfoInputs.cache
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.AssemblyInfo.cs
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.csproj.CoreCompileInputs.cache
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\bin\Debug\netcoreapp3.1\M226B_Streams.exe
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\bin\Debug\netcoreapp3.1\M226B_Streams.deps.json
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\bin\Debug\netcoreapp3.1\M226B_Streams.runtimeconfig.json
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\bin\Debug\netcoreapp3.1\M226B_Streams.runtimeconfig.dev.json
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\bin\Debug\netcoreapp3.1\M226B_Streams.dll
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\bin\Debug\netcoreapp3.1\M226B_Streams.pdb
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.dll
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.pdb
+C:\Users\maxbr\OneDrive\Desktop\M226B\M226B Git\M226B\M226B_Streams\obj\Debug\netcoreapp3.1\M226B_Streams.genruntimeconfig.cache

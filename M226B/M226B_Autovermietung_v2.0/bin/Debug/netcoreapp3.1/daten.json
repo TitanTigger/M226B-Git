@@ -1,0 +1,74 @@
+[
+  {
+    "assignedVehicle": [
+      {
+        "id": "987321649817632",
+        "Brand": "BMW",
+        "Model": "i4",
+        "Price": "1200CHF",
+        "NeedService": false,
+        "Rented": false
+      },
+      {
+        "id": "988321649817632",
+        "Brand": "AUDI",
+        "Model": "R8",
+        "Price": "1500CHF",
+        "NeedService": false,
+        "Rented": false
+      },
+      {
+        "id": "977321649817632",
+        "Brand": "FORD",
+        "Model": "Focus",
+        "Price": "1900CHF",
+        "NeedService": false,
+        "Rented": false
+      }
+    ],
+    "id": "921834769821376",
+    "Firstname": null,
+    "Lastname": "Juergental",
+    "Gender": 0
+  }
+][
+  {
+    "Clients": [],
+    "id": "91826438132987",
+    "Firstname": null,
+    "Lastname": "hansibluemtal",
+    "Gender": 0
+  },
+  {
+    "Clients": [],
+    "id": "9879809870987098",
+    "Firstname": null,
+    "Lastname": "jürgi",
+    "Gender": 0
+  }
+][
+  {
+    "id": "987321649817632",
+    "Brand": "BMW",
+    "Model": "i4",
+    "Price": "1200CHF",
+    "NeedService": false,
+    "Rented": false
+  },
+  {
+    "id": "988321649817632",
+    "Brand": "AUDI",
+    "Model": "R8",
+    "Price": "1500CHF",
+    "NeedService": false,
+    "Rented": false
+  },
+  {
+    "id": "977321649817632",
+    "Brand": "FORD",
+    "Model": "Focus",
+    "Price": "1900CHF",
+    "NeedService": false,
+    "Rented": false
+  }
+]

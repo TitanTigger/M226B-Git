@@ -8,8 +8,8 @@ namespace ch.gibz.m226b.autovermietung
     {
         public string Weight { get; set; }
 
-        public PKW(string Serialnumber, string Name, string Brand, string Model, DateTime ManufactureDate, string Price, string KmAmount, string Weight)
-            :base(Serialnumber, Name, Brand, Model, ManufactureDate, Price, KmAmount)
+        public PKW(string Serialnumber, string Brand, string Model, string Price, string Weight)
+            :base(Serialnumber, Brand, Model, Price)
         {
             this.Weight = Weight;
             

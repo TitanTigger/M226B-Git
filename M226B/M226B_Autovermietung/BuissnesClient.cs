@@ -7,8 +7,9 @@ namespace ch.gibz.m226b.autovermietung
     class BuissnesClient : Client
     {
         public string Firma { get; set; }
-        public BuissnesClient(string Firstname, string Lastname, Gender Gender, Insurance Insurance, Client_advisor ClientAdvisor, List<Rental> RentalHistory, Rental CurrentRental, string Firma)
-            : base(Firstname, Lastname, Gender, Insurance, ClientAdvisor, RentalHistory, CurrentRental)
+
+        public BuissnesClient(string Firstname, string Lastname, Insurance Insurance, Rental CurrentRental, string Firma, string displayname)
+            : base(Firstname, Lastname, Insurance, displayname)
         {
             this.Firma = Firma;
         }

@@ -6,7 +6,7 @@ namespace ch.gibz.m226b.autovermietung
 {
     public class Rental
     {
-        public string Place { get; set; }
+        public string Location { get; set; }
         public Client Client { get; set; }
         public Vehicle Vehicle { get; set; }
         public string Numberplate { get; set; }

@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M226B_Autovermietung", "M226B_Autovermietung\M226B_Autovermietung.csproj", "{5C436E83-5DCA-4DF2-90EF-328A782AE49A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M226B_Autovermietung", "M226B_Autovermietung\M226B_Autovermietung.csproj", "{5C436E83-5DCA-4DF2-90EF-328A782AE49A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M226B_Streams", "M226B_Streams\M226B_Streams.csproj", "{DEFDDE4C-2F60-4566-854E-836CF09E9014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M226B_Interfaces", "M226B_Interfaces\Interface_B1_V1.0_WOd\M226B_Interfaces.csproj", "{1E376639-4746-48E9-9F33-9650FCD7BA12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M226B_Autovermietung_v2.0", "M226B_Autovermietung_v2.0\M226B_Autovermietung_v2.0.csproj", "{EFB41DE2-059B-471C-9B9E-4D93A1722348}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{5C436E83-5DCA-4DF2-90EF-328A782AE49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C436E83-5DCA-4DF2-90EF-328A782AE49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C436E83-5DCA-4DF2-90EF-328A782AE49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFDDE4C-2F60-4566-854E-836CF09E9014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFDDE4C-2F60-4566-854E-836CF09E9014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFDDE4C-2F60-4566-854E-836CF09E9014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFDDE4C-2F60-4566-854E-836CF09E9014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E376639-4746-48E9-9F33-9650FCD7BA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E376639-4746-48E9-9F33-9650FCD7BA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E376639-4746-48E9-9F33-9650FCD7BA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E376639-4746-48E9-9F33-9650FCD7BA12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB41DE2-059B-471C-9B9E-4D93A1722348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB41DE2-059B-471C-9B9E-4D93A1722348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB41DE2-059B-471C-9B9E-4D93A1722348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB41DE2-059B-471C-9B9E-4D93A1722348}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
