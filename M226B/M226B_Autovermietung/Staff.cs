@@ -11,10 +11,6 @@ namespace ch.gibz.m226b.autovermietung
         public string Lastname { get; set; }
         public Gender Gender { get; set; }
 
-        public Staff(string Lastname, string StaffId)
-        {
-            this.Lastname = Lastname;
-            this.StaffId = StaffId;
-        }
+       
     }
 }

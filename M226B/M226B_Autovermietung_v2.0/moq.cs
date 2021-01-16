@@ -11,32 +11,54 @@ namespace M226B_Autovermietung_v2._0
     {
         public static void moqData()
         {
-            //Create new Vehicles
+            string jsonString = "";
+
+            //Create new Business which contains everything
+            Business business = new Business();
+
             List<Vehicle> vehicles = new List<Vehicle>();
 
-            vehicles.Add( new Vehicle("987321649817632", "BMW", "i4", "1200CHF"));
-            vehicles.Add( new Vehicle("988321649817632", "AUDI", "R8", "1500CHF"));
-            vehicles.Add( new Vehicle("977321649817632", "FORD", "Focus", "1900CHF"));
+            vehicles.Add( new Vehicle("BMW", "i4", "1200CHF", VehicleClass.PKW));
+            vehicles.Add( new Vehicle("AUDI", "R8", "1500CHF", VehicleClass.PKW));
+            vehicles.Add( new Vehicle("FORD", "Focus", "1900CHF", VehicleClass.PKW));
+            vehicles.Add(new Vehicle("Porsche", "911", "2400CHF", VehicleClass.PKW));
+            vehicles.Add(new Vehicle("Ferrari", "488 Spider", "2900CHF", VehicleClass.PKW));
+            vehicles.Add(new Vehicle("Honda", "Civic", "900CHF", VehicleClass.PKW));
 
-            List<Client> clients = new List<Client>();
-            //Create new Staff
+            vehicles.Add(new Vehicle("Volvo", "BigBoy", "1800CHF", VehicleClass.LKW));
+            vehicles.Add(new Vehicle("LEON", "LongBoy", "900CHF", VehicleClass.LKW));
+            vehicles.Add(new Vehicle("Sear", "SmolBoy", "900CHF", VehicleClass.LKW));
+
+
+            Dictionary<string, Client> clients = new Dictionary<string, Client>();
+            clients.Add("maxBraten", new Client("Max","Braten"));
+
+            //Create new Staff Memebers
             List<Mechanic> mechanics = new List<Mechanic>();
 
-            mechanics.Add(new Mechanic("Juergental", "921834769821376", vehicles));
-
+            mechanics.Add(new Mechanic("Bob", "Baumann", Guid.NewGuid(), vehicles));
 
             List<ClientAdvisor> advisors = new List<ClientAdvisor>();
 
-            advisors.Add(new ClientAdvisor("hansibluemtal", "91826438132987", clients));
-            advisors.Add(new ClientAdvisor("jürgi", "9879809870987098", clients));
+            advisors.Add(new ClientAdvisor("Hans", "Blumental", Guid.NewGuid(),  clients));;
+            advisors.Add(new ClientAdvisor("Mirko", "Jürgental", Guid.NewGuid(), clients));
+            advisors.Add(new ClientAdvisor("Eren", "Yaeger", Guid.NewGuid(), clients));
+            advisors.Add(new ClientAdvisor("Levin", "Ackermann", Guid.NewGuid(), clients));
 
-            string jsonString0 = JsonConvert.SerializeObject(mechanics, Formatting.Indented);
-            jsonString0 += JsonConvert.SerializeObject(advisors, Formatting.Indented);
-            jsonString0 += JsonConvert.SerializeObject(vehicles, Formatting.Indented);
+            List<Rental> rentals = new List<Rental>();
 
+            rentals.Add(new Rental(clients["maxBraten"], vehicles[0], advisors[0],"19000CHF" ,DateTime.Now, DateTime.Now.AddDays(7)));
 
-            File.WriteAllText("daten.json", jsonString0);
+            business.Vehicles = vehicles;
+            business.Clients = clients;
+            business.ClientAdvisors = advisors;
+            business.Mechanics = mechanics;
+            business.Rentals = rentals;
+            business.Names = "Buy any Car dot com";
 
+            jsonString += JsonConvert.SerializeObject(business, Formatting.Indented);
+
+            File.WriteAllText("daten.json", jsonString);
         }
     }
 }

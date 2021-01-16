@@ -6,9 +6,9 @@ namespace M226B_Autovermietung_v2._0
 {
     public class ClientAdvisor : Staff
     {
-        public List<Client> Clients { get; set; }
-        public ClientAdvisor(string Lastname, string StaffId, List<Client> Clients)
-            : base(Lastname, StaffId)
+        public Dictionary<string, Client> Clients { get; set; }
+        public ClientAdvisor(string Firstname, string Lastname, Guid StaffId, Dictionary<string, Client> Clients)
+            : base(Firstname, Lastname, StaffId)
         {
             this.Clients = Clients;
         }

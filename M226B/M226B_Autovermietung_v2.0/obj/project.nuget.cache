@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5cUK3PtIvPQMhLTmjiIiuOfkukJRH6zLYAnPg1Wjm5d40K/vfQOKfSv3hD0PX5GXSvT6mKT/cL4zvsPZw3sCDQ==",
+  "dgSpecHash": "MMFW79pWcDaAM0ObfYXsTqA9HCsjtGLas5GaA/8QWZOKkIkNK4dqpnSBuzYZfXVL/IRl+07YkwB6Q/y3e1SXrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj",
+  "projectFilePath": "C:\\Users\\Max\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\maxbr\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Max\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

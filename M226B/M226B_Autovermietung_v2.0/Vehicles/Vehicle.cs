@@ -5,21 +5,23 @@ using System.Text;
 
 namespace M226B_Autovermietung_v2._0
 {
-    class Vehicle : IIdentifier
+    public class Vehicle : IIdentifier
     {
-        public string id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string Brand { get; set; }
         public string Model { get; set; }
         public string Price { get; set; }
-        public bool NeedService { get; set; }
+        public bool NeedCheckup { get; set; }
+        public bool damaged { get; set; }
         public bool Rented { get; set; }
+        public VehicleClass VehicleClass { get; set; }
 
-        public Vehicle(string id, string Brand, string Model, string Price)
+        public Vehicle(string Brand, string Model, string Price, VehicleClass VehicleClass)
         {
-            this.id = id;
             this.Brand = Brand;
             this.Model = Model;
             this.Price = Price;
+            this.VehicleClass = VehicleClass;
         }
     }
 }

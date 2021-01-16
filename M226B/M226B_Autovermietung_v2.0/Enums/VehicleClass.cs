@@ -4,8 +4,9 @@ using System.Text;
 
 namespace M226B_Autovermietung_v2._0
 {
-    interface IIdentifier
+    public enum VehicleClass
     {
-        Guid Id { get; set; }
+        PKW,
+        LKW
     }
 }

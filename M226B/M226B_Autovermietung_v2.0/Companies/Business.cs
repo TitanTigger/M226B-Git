@@ -7,11 +7,12 @@ namespace M226B_Autovermietung_v2._0
 {
     public class Business : IIdentifier
     {
-        public string id { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
-        public List<Staff> Staff { get; set; }
-       // public List<Vehicle> Vehicle { get; set; }
-
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public string Names { get; set; }
+        public List<Mechanic> Mechanics { get; set; }
+        public List<ClientAdvisor> ClientAdvisors { get; set; }
+        public List<Rental> Rentals { get; set; }
+        public Dictionary<string, Client> Clients { get; set; }
+        public List<Vehicle> Vehicles { get; set; }      
     }
 }
