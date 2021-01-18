@@ -25,7 +25,7 @@ namespace M226B_Autovermietung_v2._0
             //Read content of Json file
             Business business = ReadJson();
 
-            /*ENTER AUTOHAUS */
+            /* ENTER AUTOHAUS */
             Rental completedRental;
             ClientAdvisor selectedAdvisor;
             Client currentClient;
@@ -35,6 +35,7 @@ namespace M226B_Autovermietung_v2._0
             Console.WriteLine("1: Id like to rent a vehicle");
             Console.WriteLine("2: Id like to return an already rented a vehicle");
             Console.WriteLine("3: Id like to view my order history");
+            Console.WriteLine("4: Statistikwerte Ausgeben");
 
             while (choosing == true)
             {
@@ -85,7 +86,7 @@ namespace M226B_Autovermietung_v2._0
                                 string advisorInput = Console.ReadLine();
                                 //Convert user input into integer value
                                 int advisorKey = Convert.ToInt32(advisorInput);
-                                //Select from array (-1 since 1 = 0 in array)
+                                //Select from list (-1 since 1 = 0 in array)
                                 selectedAdvisor = business.ClientAdvisors[advisorKey - 1];
                                 selectedAdvisor.isBusy = true;
                             }
@@ -150,7 +151,7 @@ namespace M226B_Autovermietung_v2._0
                                 string vehicleInput = Console.ReadLine();
                                 //Convert user input into integer value
                                 int vehicleKey = Convert.ToInt32(vehicleInput);
-                                //Select from array (-1 since 1 = 0 in array)
+                                //Select from list (-1 since 1 = 0 in array)
                                 selectedVehicle = business.Vehicles[vehicleKey - 1];
                             }
                             catch (ArgumentOutOfRangeException)
@@ -168,6 +169,7 @@ namespace M226B_Autovermietung_v2._0
                         Thread.Sleep(2000);
                         Console.Clear();
 
+                        //Rental Time
                         DateTime startDate = DateTime.MinValue;
                         DateTime returnDate = DateTime.MinValue;
                         Console.WriteLine("Now Please enter the date you would like to rent this Vehicle for");
@@ -221,7 +223,8 @@ namespace M226B_Autovermietung_v2._0
                         string pricenumber = Regex.Match(selectedVehicle.Price, @"\d+").Value;
                         int totalPrice = Convert.ToInt32(pricenumber) * Convert.ToInt32(daysAmountInput);
 
-                        Console.WriteLine("Heres your Invoice");
+                        //Rechnung
+                        Console.WriteLine("***Heres your Invoice***");
                         Console.WriteLine($"Order Completion Date {DateTime.Now}");
                         Console.WriteLine($"Client Credentials {firstname} {lastname} {username}");
                         Console.WriteLine($"Vehicle you ordered {selectedVehicle.Brand} {selectedVehicle.Model}");
@@ -259,14 +262,16 @@ namespace M226B_Autovermietung_v2._0
                             }
                         }
 
+
                         Thread.Sleep(2000);
                         Console.Clear();
 
+                        //Print Receipt
                         selectedAdvisor.isBusy = false;
                         selectedVehicle.Rented = true;
                         completedRental = new Rental(currentClient, selectedVehicle, selectedAdvisor, $"{totalPrice}CHF", startDate, returnDate);
                         business.Rentals.Add(completedRental);
-                        Console.WriteLine("Heres your Receipt");
+                        Console.WriteLine("***Heres your Receipt***");
                         Console.WriteLine($"Order Completion Date {DateTime.Now}");
                         Console.WriteLine($"Client Credentials {firstname} {lastname} {username}");
                         Console.WriteLine($"Vehicle you ordered {selectedVehicle.Brand} {selectedVehicle.Model}");
@@ -279,7 +284,7 @@ namespace M226B_Autovermietung_v2._0
                         break;
 
                     //RETURN
-                    case "2":
+                    case "2":                        
                         Console.WriteLine("Please enter your username");
                         try
                         {
@@ -296,7 +301,7 @@ namespace M226B_Autovermietung_v2._0
                         Thread.Sleep(2000);
                         Console.Clear();
 
-
+                        //Get active rentals
                         Rental userActiveRental = null;
                         foreach (var rental in business.Rentals)
                         {
@@ -315,7 +320,7 @@ namespace M226B_Autovermietung_v2._0
                             Console.WriteLine($"To be returned by: {userActiveRental.ReturnDate}");
                             userActiveRental.Vehicle.Rented = false;
                             selectedVehicle = userActiveRental.Vehicle;
-                            Console.WriteLine($"Vehicle has ben returned...");
+                            Console.WriteLine($"***Vehicle has been returned...***");
                         }
                         else
                         {
@@ -355,6 +360,7 @@ namespace M226B_Autovermietung_v2._0
                         Thread.Sleep(2000);
                         Console.Clear();
 
+                        //Get rental history
                         List<Rental> rentalHistory = new List<Rental>();
                         foreach (var rental in business.Rentals)
                         {
@@ -383,6 +389,26 @@ namespace M226B_Autovermietung_v2._0
 
                         break;
 
+                    case "4":
+                        Console.WriteLine("Stats");
+                        Console.WriteLine($"Cars sold TOTAL: {business.Rentals.Count}");
+                        int umsatzTotal = 0;
+                        int umsatzMonth = 0;
+
+                        foreach (var rental in business.Rentals)
+                        {
+                            string umsatzNumber = Regex.Match(rental.price, @"\d+").Value;
+                            umsatzTotal += Convert.ToInt32(umsatzNumber);
+
+                            if (rental.RentalDate.Month == DateTime.Today.Month)
+                            {
+                                umsatzMonth += Convert.ToInt32(umsatzNumber);
+                            }
+                        }
+                        Console.WriteLine($"Umsatz TOTAL: {umsatzTotal} CHF");
+                        Console.WriteLine($"Umsatz MONTH: {umsatzMonth} CHF");
+                        break;
+
                     default:
                         Console.WriteLine("Please select a valid option");
                         break;
@@ -393,6 +419,7 @@ namespace M226B_Autovermietung_v2._0
             }
             
         }
+
         // Deserielize the Json File into business class
         static Business ReadJson()
         {

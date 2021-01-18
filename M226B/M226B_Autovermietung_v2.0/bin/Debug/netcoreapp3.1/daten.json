@@ -1,11 +1,11 @@
 {
-  "Id": "5f67c9a9-0d1b-4fe0-b027-5c8a9189841a",
+  "Id": "96ca8c9a-e749-45f1-9575-ffde2f009115",
   "Names": "Buy any Car dot com",
   "Mechanics": [
     {
       "assignedVehicle": [
         {
-          "Id": "7be1cbaf-cc0e-4e1d-8927-dd9c2eced35c",
+          "Id": "cdcfaf39-2551-408a-a1c0-530b48e3be85",
           "Brand": "BMW",
           "Model": "i4",
           "Price": "1200CHF",
@@ -15,7 +15,7 @@
           "VehicleClass": 0
         },
         {
-          "Id": "270e0f5f-3005-4adc-b5ac-035545524d2d",
+          "Id": "9c64a498-3cd8-43a1-a2af-986fb9e03da4",
           "Brand": "AUDI",
           "Model": "R8",
           "Price": "1500CHF",
@@ -25,7 +25,7 @@
           "VehicleClass": 0
         },
         {
-          "Id": "b766148f-3d0b-4809-90ba-1e0d31282d27",
+          "Id": "ffc1f6eb-ad50-4f03-a343-8ed1aac7c80b",
           "Brand": "FORD",
           "Model": "Focus",
           "Price": "1900CHF",
@@ -35,7 +35,7 @@
           "VehicleClass": 0
         },
         {
-          "Id": "fa68cc14-d6fd-48d8-8548-63aef1dd556f",
+          "Id": "2c2cc6da-e72c-480b-9fcb-edb8e804b755",
           "Brand": "Porsche",
           "Model": "911",
           "Price": "2400CHF",
@@ -45,7 +45,7 @@
           "VehicleClass": 0
         },
         {
-          "Id": "d4dfccca-c430-490c-a1a0-924dfee442e4",
+          "Id": "ce36fbe9-3e14-4487-927e-3e8d07001eea",
           "Brand": "Ferrari",
           "Model": "488 Spider",
           "Price": "2900CHF",
@@ -55,7 +55,7 @@
           "VehicleClass": 0
         },
         {
-          "Id": "70c5c436-4b67-42c7-b882-79af038d7def",
+          "Id": "c0c4800a-3a28-41c9-bb77-adc4c09dd44d",
           "Brand": "Honda",
           "Model": "Civic",
           "Price": "900CHF",
@@ -65,7 +65,7 @@
           "VehicleClass": 0
         },
         {
-          "Id": "75c40afd-7aee-4426-8b57-d71418dda080",
+          "Id": "d0f0a0b8-264e-4a71-be3e-2491c8231538",
           "Brand": "Volvo",
           "Model": "BigBoy",
           "Price": "1800CHF",
@@ -75,7 +75,7 @@
           "VehicleClass": 1
         },
         {
-          "Id": "b02e6833-55cd-4f58-88a3-b90ef498ff10",
+          "Id": "3d0c4329-dc2e-43f7-b346-4bf18c1fd88f",
           "Brand": "LEON",
           "Model": "LongBoy",
           "Price": "900CHF",
@@ -85,7 +85,7 @@
           "VehicleClass": 1
         },
         {
-          "Id": "be14c347-1263-4e12-b223-73bfc2e14a95",
+          "Id": "891bea7c-c752-4777-81d7-669d7e27167f",
           "Brand": "Sear",
           "Model": "SmolBoy",
           "Price": "900CHF",
@@ -96,7 +96,7 @@
         }
       ],
       "busy": false,
-      "Id": "797bc43c-a908-4997-93fd-884e9e633336",
+      "Id": "2930fbb9-2d36-4f76-949c-a31c38042416",
       "Firstname": "Bob",
       "Lastname": "Baumann",
       "isBusy": false
@@ -106,12 +106,12 @@
     {
       "Clients": {
         "maxBraten": {
-          "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
+          "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
           "Firstname": "Max",
           "Lastname": "Braten"
         }
       },
-      "Id": "b4746cfc-da9d-4a14-8d32-6d8d692e16f9",
+      "Id": "a53f1a20-e4c5-491c-adda-083865735a23",
       "Firstname": "Hans",
       "Lastname": "Blumental",
       "isBusy": false
@@ -119,12 +119,12 @@
     {
       "Clients": {
         "maxBraten": {
-          "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
+          "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
           "Firstname": "Max",
           "Lastname": "Braten"
         }
       },
-      "Id": "10765c56-8537-4041-a2c7-1db92dbeeae9",
+      "Id": "90ebf967-ab5d-4d5f-ad22-13cd01e042b0",
       "Firstname": "Mirko",
       "Lastname": "Jürgental",
       "isBusy": false
@@ -132,12 +132,12 @@
     {
       "Clients": {
         "maxBraten": {
-          "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
+          "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
           "Firstname": "Max",
           "Lastname": "Braten"
         }
       },
-      "Id": "675049f3-b2cb-4b59-aede-44e9eb6e4d19",
+      "Id": "b5dcb4a7-a4c8-4807-9493-50dbbcac0d25",
       "Firstname": "Eren",
       "Lastname": "Yaeger",
       "isBusy": false
@@ -145,12 +145,12 @@
     {
       "Clients": {
         "maxBraten": {
-          "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
+          "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
           "Firstname": "Max",
           "Lastname": "Braten"
         }
       },
-      "Id": "b99109bd-b0d8-4b02-9f69-01b9737694df",
+      "Id": "0eb1fc3e-2a4d-41f2-9152-2c960da32691",
       "Firstname": "Levin",
       "Lastname": "Ackermann",
       "isBusy": false
@@ -158,14 +158,14 @@
   ],
   "Rentals": [
     {
-      "Id": "93df5331-9496-4428-92df-caba977fab11",
+      "Id": "830149c3-2a08-4d85-8a6f-94c4078bf392",
       "Client": {
-        "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
+        "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
         "Firstname": "Max",
         "Lastname": "Braten"
       },
       "Vehicle": {
-        "Id": "7be1cbaf-cc0e-4e1d-8927-dd9c2eced35c",
+        "Id": "cdcfaf39-2551-408a-a1c0-530b48e3be85",
         "Brand": "BMW",
         "Model": "i4",
         "Price": "1200CHF",
@@ -177,70 +177,31 @@
       "Advisor": {
         "Clients": {
           "maxBraten": {
-            "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
+            "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
             "Firstname": "Max",
             "Lastname": "Braten"
           }
         },
-        "Id": "b4746cfc-da9d-4a14-8d32-6d8d692e16f9",
+        "Id": "a53f1a20-e4c5-491c-adda-083865735a23",
         "Firstname": "Hans",
         "Lastname": "Blumental",
         "isBusy": false
       },
-      "price": null,
-      "RentalDate": "2021-01-16T17:01:04.5165609+01:00",
-      "ReturnDate": "2021-01-23T17:01:04.5204548+01:00"
-    },
-    {
-      "Id": "f73d5713-ac37-415a-9169-0b1fdd64d025",
-      "Client": {
-        "Id": "0be6c00c-da20-4917-a5c4-6e0fdabb2e3a",
-        "Firstname": "Max",
-        "Lastname": "Braten"
-      },
-      "Vehicle": {
-        "Id": "70c5c436-4b67-42c7-b882-79af038d7def",
-        "Brand": "Honda",
-        "Model": "Civic",
-        "Price": "900CHF",
-        "NeedCheckup": false,
-        "damaged": false,
-        "Rented": false,
-        "VehicleClass": 0
-      },
-      "Advisor": {
-        "Clients": {
-          "maxBraten": {
-            "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
-            "Firstname": "Max",
-            "Lastname": "Braten"
-          }
-        },
-        "Id": "b99109bd-b0d8-4b02-9f69-01b9737694df",
-        "Firstname": "Levin",
-        "Lastname": "Ackermann",
-        "isBusy": false
-      },
-      "price": null,
-      "RentalDate": "2021-01-16T17:02:44.4408619+01:00",
-      "ReturnDate": "2021-01-23T17:02:44.4408619+01:00"
+      "price": "19000CHF",
+      "RentalDate": "2021-01-17T21:20:46.239209+01:00",
+      "ReturnDate": "2021-01-24T21:20:46.2434522+01:00"
     }
   ],
   "Clients": {
     "maxBraten": {
-      "Id": "117e59e7-4c02-45ad-809c-a37b198b7769",
-      "Firstname": "Max",
-      "Lastname": "Braten"
-    },
-    "TitanTigger": {
-      "Id": "0be6c00c-da20-4917-a5c4-6e0fdabb2e3a",
+      "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
       "Firstname": "Max",
       "Lastname": "Braten"
     }
   },
   "Vehicles": [
     {
-      "Id": "7be1cbaf-cc0e-4e1d-8927-dd9c2eced35c",
+      "Id": "cdcfaf39-2551-408a-a1c0-530b48e3be85",
       "Brand": "BMW",
       "Model": "i4",
       "Price": "1200CHF",
@@ -250,7 +211,7 @@
       "VehicleClass": 0
     },
     {
-      "Id": "270e0f5f-3005-4adc-b5ac-035545524d2d",
+      "Id": "9c64a498-3cd8-43a1-a2af-986fb9e03da4",
       "Brand": "AUDI",
       "Model": "R8",
       "Price": "1500CHF",
@@ -260,7 +221,7 @@
       "VehicleClass": 0
     },
     {
-      "Id": "b766148f-3d0b-4809-90ba-1e0d31282d27",
+      "Id": "ffc1f6eb-ad50-4f03-a343-8ed1aac7c80b",
       "Brand": "FORD",
       "Model": "Focus",
       "Price": "1900CHF",
@@ -270,7 +231,7 @@
       "VehicleClass": 0
     },
     {
-      "Id": "fa68cc14-d6fd-48d8-8548-63aef1dd556f",
+      "Id": "2c2cc6da-e72c-480b-9fcb-edb8e804b755",
       "Brand": "Porsche",
       "Model": "911",
       "Price": "2400CHF",
@@ -280,7 +241,7 @@
       "VehicleClass": 0
     },
     {
-      "Id": "d4dfccca-c430-490c-a1a0-924dfee442e4",
+      "Id": "ce36fbe9-3e14-4487-927e-3e8d07001eea",
       "Brand": "Ferrari",
       "Model": "488 Spider",
       "Price": "2900CHF",
@@ -290,17 +251,17 @@
       "VehicleClass": 0
     },
     {
-      "Id": "70c5c436-4b67-42c7-b882-79af038d7def",
+      "Id": "c0c4800a-3a28-41c9-bb77-adc4c09dd44d",
       "Brand": "Honda",
       "Model": "Civic",
       "Price": "900CHF",
       "NeedCheckup": false,
       "damaged": false,
-      "Rented": true,
+      "Rented": false,
       "VehicleClass": 0
     },
     {
-      "Id": "75c40afd-7aee-4426-8b57-d71418dda080",
+      "Id": "d0f0a0b8-264e-4a71-be3e-2491c8231538",
       "Brand": "Volvo",
       "Model": "BigBoy",
       "Price": "1800CHF",
@@ -310,7 +271,7 @@
       "VehicleClass": 1
     },
     {
-      "Id": "b02e6833-55cd-4f58-88a3-b90ef498ff10",
+      "Id": "3d0c4329-dc2e-43f7-b346-4bf18c1fd88f",
       "Brand": "LEON",
       "Model": "LongBoy",
       "Price": "900CHF",
@@ -320,7 +281,7 @@
       "VehicleClass": 1
     },
     {
-      "Id": "be14c347-1263-4e12-b223-73bfc2e14a95",
+      "Id": "891bea7c-c752-4777-81d7-669d7e27167f",
       "Brand": "Sear",
       "Model": "SmolBoy",
       "Price": "900CHF",
