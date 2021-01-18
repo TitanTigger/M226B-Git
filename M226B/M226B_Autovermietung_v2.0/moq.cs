@@ -54,7 +54,7 @@ namespace M226B_Autovermietung_v2._0
             business.ClientAdvisors = advisors;
             business.Mechanics = mechanics;
             business.Rentals = rentals;
-            business.Names = "Buy any Car dot com";
+            business.Name = "Buy any Car dot com";
 
             jsonString += JsonConvert.SerializeObject(business, Formatting.Indented);
 

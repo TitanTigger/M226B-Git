@@ -13,5 +13,22 @@ namespace M226B_Autovermietung_v2._0
         {
             this.assignedVehicle = assignedVehicle;
         }
+
+        
+        public static void CheckUp(Mechanic mechanic, Rental rental)
+        {
+            int count = 0;
+            //Assign vehicle to two mechanics 
+            if (mechanic.busy != true && count == 2)
+            {
+                count++;
+                mechanic.assignedVehicle.Add(rental.Vehicle);
+                if (rental.Vehicle.damaged != true)
+                {
+                    rental.Vehicle.NeedCheckup = false;
+                    mechanic.busy = false;
+                }
+            }
+        }
     }
 }

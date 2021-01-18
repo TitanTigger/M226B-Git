@@ -1,6 +1,6 @@
 {
   "Id": "96ca8c9a-e749-45f1-9575-ffde2f009115",
-  "Names": "Buy any Car dot com",
+  "Name": null,
   "Mechanics": [
     {
       "assignedVehicle": [
@@ -190,6 +190,40 @@
       "price": "19000CHF",
       "RentalDate": "2021-01-17T21:20:46.239209+01:00",
       "ReturnDate": "2021-01-24T21:20:46.2434522+01:00"
+    },
+    {
+      "Id": "0fc423b7-78b1-4af8-8070-835fd59bfa15",
+      "Client": {
+        "Id": "62a8dd97-799b-45a9-aac6-320d7c69f36f",
+        "Firstname": "Joshua",
+        "Lastname": "Lipp"
+      },
+      "Vehicle": {
+        "Id": "d0f0a0b8-264e-4a71-be3e-2491c8231538",
+        "Brand": "Volvo",
+        "Model": "BigBoy",
+        "Price": "1800CHF",
+        "NeedCheckup": false,
+        "damaged": false,
+        "Rented": true,
+        "VehicleClass": 1
+      },
+      "Advisor": {
+        "Clients": {
+          "maxBraten": {
+            "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
+            "Firstname": "Max",
+            "Lastname": "Braten"
+          }
+        },
+        "Id": "90ebf967-ab5d-4d5f-ad22-13cd01e042b0",
+        "Firstname": "Mirko",
+        "Lastname": "Jürgental",
+        "isBusy": false
+      },
+      "price": "16200CHF",
+      "RentalDate": "2021-01-18T11:34:38.7980543+01:00",
+      "ReturnDate": "2021-01-27T11:34:38.7980543+01:00"
     }
   ],
   "Clients": {
@@ -197,6 +231,11 @@
       "Id": "f9aadf5b-f3ae-453e-850b-2e5744d76316",
       "Firstname": "Max",
       "Lastname": "Braten"
+    },
+    "jlipp": {
+      "Id": "62a8dd97-799b-45a9-aac6-320d7c69f36f",
+      "Firstname": "Joshua",
+      "Lastname": "Lipp"
     }
   },
   "Vehicles": [
@@ -267,7 +306,7 @@
       "Price": "1800CHF",
       "NeedCheckup": false,
       "damaged": false,
-      "Rented": false,
+      "Rented": true,
       "VehicleClass": 1
     },
     {

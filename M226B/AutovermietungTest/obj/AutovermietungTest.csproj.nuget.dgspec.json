@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\AutovermietungTest\\AutovermietungTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\AutovermietungTest\\AutovermietungTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\AutovermietungTest\\AutovermietungTest.csproj",
+        "projectName": "AutovermietungTest",
+        "projectPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\AutovermietungTest\\AutovermietungTest.csproj",
+        "packagesPath": "C:\\Users\\maxbr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\AutovermietungTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maxbr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj": {
+                "projectPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj",
+        "projectName": "M226B_Autovermietung_v2.0",
+        "projectPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\M226B_Autovermietung_v2.0.csproj",
+        "packagesPath": "C:\\Users\\maxbr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxbr\\OneDrive\\Desktop\\M226B\\M226B Git\\M226B\\M226B_Autovermietung_v2.0\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maxbr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

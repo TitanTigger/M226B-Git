@@ -7,11 +7,10 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace M226B_Autovermietung_v2._0
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -30,6 +29,7 @@ namespace M226B_Autovermietung_v2._0
             ClientAdvisor selectedAdvisor;
             Client currentClient;
             Vehicle selectedVehicle;
+            Statistics stats = new Statistics();
             bool choosing = true;
 
             Console.WriteLine("1: Id like to rent a vehicle");
@@ -96,7 +96,6 @@ namespace M226B_Autovermietung_v2._0
                             }
                         }
 
-
                         Console.WriteLine("You Selected");
                         Console.WriteLine(selectedAdvisor.Lastname);
 
@@ -160,9 +159,6 @@ namespace M226B_Autovermietung_v2._0
                             }
 
                         }
-
-
-
                         Console.WriteLine("You Selected");
                         Console.WriteLine($"{selectedVehicle.Brand} {selectedVehicle.Model} for a daily Price of {selectedVehicle.Price}");
 
@@ -188,7 +184,14 @@ namespace M226B_Autovermietung_v2._0
                                 else
                                 {
                                     startDate = Convert.ToDateTime(startDateInput).ToUniversalTime();
-                                    choosing = false;
+                                    if (startDate.Date < DateTime.Now)
+                                    {
+                                        Console.WriteLine("Please enter a valid future");
+                                    }
+                                    else
+                                    {
+                                        choosing = false;
+                                    }
                                 }
                             }
                             catch (FormatException)
@@ -230,26 +233,23 @@ namespace M226B_Autovermietung_v2._0
                         Console.WriteLine($"Vehicle you ordered {selectedVehicle.Brand} {selectedVehicle.Model}");
                         Console.WriteLine($"Rental period: {startDate} until {returnDate}");
                         Console.WriteLine($"Payment Info: Total = {totalPrice} CHF");
-                        Console.WriteLine($"Thanks for choosing {business.Names}");
+                        Console.WriteLine($"Thanks for choosing {business.Name}");
                         Console.WriteLine($"");
 
                         Console.WriteLine($"please select which payment method youd like to use to pay the total of {totalPrice} CHF");
                         Console.WriteLine("1 = Credit Card");
                         Console.WriteLine("2 = Cash");
-                        string paymentMethod = "unpayed";
                         choosing = true;
                         while (choosing == true)
                         {
                             switch (Console.ReadLine())
                             {
                                 case "1":
-                                    paymentMethod = "Credit Card";
                                     Console.WriteLine($"You Succesfully payed {totalPrice} CHF");
                                     choosing = false;
                                     break;
 
                                 case "2":
-                                    paymentMethod = "Cash";
                                     Console.WriteLine("Please enter the amount of money you are paying");
                                     string amountPayed = Console.ReadLine();
                                     Console.WriteLine($"Payment succesful, heres your Change {Convert.ToInt32(amountPayed) - totalPrice} CHF");
@@ -262,7 +262,6 @@ namespace M226B_Autovermietung_v2._0
                             }
                         }
 
-
                         Thread.Sleep(2000);
                         Console.Clear();
 
@@ -272,12 +271,8 @@ namespace M226B_Autovermietung_v2._0
                         completedRental = new Rental(currentClient, selectedVehicle, selectedAdvisor, $"{totalPrice}CHF", startDate, returnDate);
                         business.Rentals.Add(completedRental);
                         Console.WriteLine("***Heres your Receipt***");
-                        Console.WriteLine($"Order Completion Date {DateTime.Now}");
-                        Console.WriteLine($"Client Credentials {firstname} {lastname} {username}");
-                        Console.WriteLine($"Vehicle you ordered {selectedVehicle.Brand} {selectedVehicle.Model}");
-                        Console.WriteLine($"Rental period: {startDate} until {returnDate}");
-                        Console.WriteLine($"Payment Info: Total = {totalPrice} CHF Payment Method: {paymentMethod}");
-                        Console.WriteLine($"Thanks for choosing {business.Names}");
+                        WriteOrderDetails(completedRental);
+                        Console.WriteLine($"Thanks for choosing {business.Name}");
                         Console.WriteLine($"Heres your keys, Have a nice drive");
 
                         choosing = false;
@@ -290,7 +285,7 @@ namespace M226B_Autovermietung_v2._0
                         {
                             currentClient = business.Clients[Console.ReadLine()];
                         }
-                        catch (KeyNotFoundException ex)
+                        catch (KeyNotFoundException)
                         {
                             currentClient = null;
                             Console.WriteLine("Username does Not exist");
@@ -314,13 +309,10 @@ namespace M226B_Autovermietung_v2._0
                         if (userActiveRental != null)
                         {
                             Console.WriteLine("Here are all your Active orders");
-                            Console.WriteLine($"{userActiveRental.Vehicle.Id}");
-                            Console.WriteLine($"{userActiveRental.Vehicle.Brand} {userActiveRental.Vehicle.Model}");
-                            Console.WriteLine($"Rented on: {userActiveRental.RentalDate}");
-                            Console.WriteLine($"To be returned by: {userActiveRental.ReturnDate}");
+                            WriteOrderDetails(userActiveRental);
                             userActiveRental.Vehicle.Rented = false;
                             selectedVehicle = userActiveRental.Vehicle;
-                            Console.WriteLine($"***Vehicle has been returned...***");
+                            Console.WriteLine($"***Vehicle has been returned... Thanks");
                         }
                         else
                         {
@@ -328,19 +320,15 @@ namespace M226B_Autovermietung_v2._0
                         }
 
                         // Rückgabe Check
-                        if ((userActiveRental.RentalDate - userActiveRental.ReturnDate).TotalDays == 7)
+                        if ((userActiveRental.ReturnDate - userActiveRental.RentalDate).TotalDays == 7)
                         {
-                            Console.WriteLine("Please park youre vehicle at a service checkup spot");
+                            Console.WriteLine("Please park your vehicle at a service checkup spot");
                             userActiveRental.Vehicle.NeedCheckup = true;
                             foreach (var mechanic in business.Mechanics)
                             {
-                                if (mechanic.busy != true)
-                                {
-                                    mechanic.assignedVehicle.Add(userActiveRental.Vehicle);
-                                }
+                                Mechanic.CheckUp(mechanic, userActiveRental);
                             }
                         }
-
                         break;
 
                     case "3":
@@ -349,7 +337,7 @@ namespace M226B_Autovermietung_v2._0
                         {
                             currentClient = business.Clients[Console.ReadLine()];
                         }
-                        catch (KeyNotFoundException ex)
+                        catch (KeyNotFoundException)
                         {
                             currentClient = null;
                             Console.WriteLine("Username does Not exist");
@@ -374,10 +362,7 @@ namespace M226B_Autovermietung_v2._0
                             Console.WriteLine("RENTAL HISTORY");
                             foreach (var rental in rentalHistory)
                             {
-                                Console.WriteLine($"RentalDate: {rental.RentalDate}");
-                                Console.WriteLine($"Vehicle you ordered {rental.Vehicle.Brand} {rental.Vehicle.Model}");
-                                Console.WriteLine($"Rental period: {rental.RentalDate} until {rental.ReturnDate}");
-                                Console.WriteLine($"Payment Info: Total = {rental.price} CHF");
+                                WriteOrderDetails(rental);
                                 Console.WriteLine();
                             }
                         }
@@ -386,36 +371,17 @@ namespace M226B_Autovermietung_v2._0
                             Console.WriteLine("You have no Rentals...");
                         }
                         choosing = false;
-
                         break;
 
                     case "4":
-                        Console.WriteLine("Stats");
-                        Console.WriteLine($"Cars sold TOTAL: {business.Rentals.Count}");
-                        int umsatzTotal = 0;
-                        int umsatzMonth = 0;
-
-                        foreach (var rental in business.Rentals)
-                        {
-                            string umsatzNumber = Regex.Match(rental.price, @"\d+").Value;
-                            umsatzTotal += Convert.ToInt32(umsatzNumber);
-
-                            if (rental.RentalDate.Month == DateTime.Today.Month)
-                            {
-                                umsatzMonth += Convert.ToInt32(umsatzNumber);
-                            }
-                        }
-                        Console.WriteLine($"Umsatz TOTAL: {umsatzTotal} CHF");
-                        Console.WriteLine($"Umsatz MONTH: {umsatzMonth} CHF");
+                        stats.CalculateSales(business);
                         break;
 
                     default:
                         Console.WriteLine("Please select a valid option");
                         break;
-
                 }
-                string businessJsonString = JsonConvert.SerializeObject(business, Formatting.Indented);
-                File.WriteAllText("daten.json", businessJsonString);
+                WriteJson(business);
             }
             
         }
@@ -432,5 +398,22 @@ namespace M226B_Autovermietung_v2._0
 
             return business;
         }
+
+        static void WriteJson(Business business)
+        {
+            string businessJsonString = JsonConvert.SerializeObject(business, Formatting.Indented);
+            File.WriteAllText("daten.json", businessJsonString);
+        }
+
+        static void WriteOrderDetails(Rental rental)
+        {
+            Console.WriteLine($"Order Completion Date {DateTime.Now}");
+            Console.WriteLine($"Client Credentials {rental.Client.Firstname} {rental.Client.Lastname}");
+            Console.WriteLine($"Vehicle you ordered {rental.Vehicle.Brand} {rental.Vehicle.Model}");
+            Console.WriteLine($"Rental period: {rental.RentalDate} until {rental.ReturnDate}");
+            Console.WriteLine($"Payment Info: Total = {rental.price} CHF");
+        }
+
+    
     }
 }

@@ -8,7 +8,7 @@ namespace M226B_Autovermietung_v2._0
     public class Business : IIdentifier
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-        public string Names { get; set; }
+        public string Name { get; set; }
         public List<Mechanic> Mechanics { get; set; }
         public List<ClientAdvisor> ClientAdvisors { get; set; }
         public List<Rental> Rentals { get; set; }
